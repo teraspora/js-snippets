@@ -63,6 +63,7 @@ undefined
 35
 
 
+// Colour logging function:
 const log = msg => {
     let col;
     switch (msg[0].toLowerCase()) {
