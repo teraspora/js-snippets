@@ -16,3 +16,10 @@ function jsonToHTML(jsondata, fields) {
    return datah;
 }
 
+async function load_json(jsonfile, title, fields, target) {
+   const res = await fetch(jsonfile);
+   let data = await res.json();
+   console.table(data);
+   let datah = `<h2>${title}</h2>`;                  
+   target.innerHTML = datah + jsonToHTML(data, fields, false);
+}
