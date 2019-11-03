@@ -9,7 +9,7 @@
 
 Well why not attenuate the stress and simplify your life with this little function:
 
-```
+```javascript
 function outline_elements() {
     els = [...(document.body.querySelectorAll(`body > *, body > * > *, body > * > * > *`))];
     els.forEach(elem => { Object.assign(elem.style, {border: `1px solid #f00`}); });
@@ -40,4 +40,5 @@ If you highlight its name in the list of snippets, you can - and should - rename
 
 You can run it from a right-click context menu or just hit `Ctrl+Enter`.
 You also have the option here to save it in your local filesystem.
+77777777777777777777
 
