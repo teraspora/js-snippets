@@ -40,5 +40,6 @@ If you highlight its name in the list of snippets, you can - and should - rename
 
 You can run it from a right-click context menu or just hit `Ctrl+Enter`.
 You also have the option here to save it in your local filesystem.
-77777777777777777777
+
+
 
