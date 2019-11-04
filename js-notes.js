@@ -257,3 +257,7 @@ function outline_elements() {
     els.forEach(elem => { Object.assign(elem.style, {border: `1px solid #f00`}); });
 }
 outline_elements();
+
+
+// CSS forms trick: only apply style when some text has been typed:
+// selector: :not(:placeholder-shown)

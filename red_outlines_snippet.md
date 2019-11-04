@@ -41,5 +41,23 @@ If you highlight its name in the list of snippets, you can - and should - rename
 You can run it from a right-click context menu or just hit `Ctrl+Enter`.
 You also have the option here to save it in your local filesystem.
 
+## Extra:  Make it an IIFE
+
+An IIFE (*Immediately Invoked Function Expression*) is a function which is invoked, and therefore runs, as soon as it is defined.   So we can save having to invoke it after defining it:
+
+```javascript
+(_ => {
+    els = [...(document.body.querySelectorAll(`body > *, body > * > *, body > * > * > *`))];
+    els.forEach(elem => { Object.assign(elem.style, {border: `1px solid #f00`}); });
+})()
+```
+
+As we're invoking it immediately, we don't need our function to have a name, so we might as well use an anonymous function.   Note that we also save a bit of typing, and arguably make it a little easier to read, by using an arrow function.   We also need to wrap the entire function in parentheses, else we'll get a syntax error.   Of course, it's the `()` at the end which result in its invocation.
+
+So this is all the code we need for our snippet.   Try it out first by just pasting it into the Dev Tools console.
+
+Lastly, to anticipate what some readers may say, yes, it can be written in one line, but this makes it difficult for humans to see easily what's going on, so I prefer the above two-line version, which makes it clear that first we select our elements, then we apply the style properties.
+
+
 
 
