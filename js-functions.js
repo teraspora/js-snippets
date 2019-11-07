@@ -36,3 +36,17 @@ async function load_json(jsonfile, title, fields, target) {
    let datah = `<h2>${title}</h2>`;                  
    target.innerHTML = datah + jsonToHTML(data, fields, false);
 }
+
+function createMask() {
+    return parseInt([...arguments].map(p => (+p).toString()).join(``), 2);
+}
+
+
+function createMask() {
+    return parseInt([...arguments].map(p => (+p).toString()).join(``), 2);
+}
+
+function outline_elements() {
+    els = [...(document.body.querySelectorAll(`body > *, body > * > *, body > * > * > *`))];
+    els.forEach(elem => {Object.assign(elem.style, {border: `1px solid #f00`}); });
+}
