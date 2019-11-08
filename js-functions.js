@@ -1,3 +1,5 @@
+let fac = (_ => (i = f = 1, _ => f *= i++))();
+
 function jsonToHTML(jsondata, fields) {
    let datah = ``;
    jsondata.forEach(item => {
