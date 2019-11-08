@@ -1,4 +1,8 @@
-let fac = (_ => (i = f = 1, _ => f *= i++))();
+const range = (m, n) => [...(function*(p, q) {
+    while (p < q) yield p++;
+})(m, n)];
+
+const fac = (_ => (i = f = 1, _ => f *= i++))();
 
 function jsonToHTML(jsondata, fields) {
    let datah = ``;
