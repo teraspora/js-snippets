@@ -148,7 +148,7 @@ fac();
 120
 */
 // And even shorter: ;)
-let fac = (_ => (i = f = 1, _ => f *= i++))();
+const fac = (_ => (i = f = 1, _ => f *= i++))();
 let inc = (_ => (i = 0, _ => i++))();
 
 // Range functions
