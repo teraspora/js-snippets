@@ -1,3 +1,5 @@
+cc = x => console.log(`%c### ${x}`, `color: #00d39e; font-size: 1.6vw;`);
+
 const range = (m, n) => [...(function*(p, q) {
     while (p < q) yield p++;
 })(m, n)];
