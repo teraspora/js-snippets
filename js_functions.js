@@ -57,3 +57,21 @@ function outline_elements() {
     els = [...(document.body.querySelectorAll(`body > *, body > * > *, body > * > * > *`))];
     els.forEach(elem => {Object.assign(elem.style, {border: `1px solid #f00`}); });
 }
+
+function line_y(x0, y0, x1, y1, x) {
+    return x1 == x0 ? Infinity : (y1 - y0) / (x1 - x0) * (x - x0) + y0;
+}
+
+function line_x(x0, y0, x1, y1, y) {
+    if (x1 == x0) {
+	return Infinity;
+    }
+    let m = (y1 - y0) / (x1 - x0);
+    return (y - y0 + m * x0) / m;
+}
+
+function edge_points(x0, y0, x1, y1, w, h) {
+     return [[0, line_y(x0, y0, x1, y1, 0)], [w, line_y(x0, y0, x1, y1, w)], [line_x(x0, y0, x1, y1, 0), 0], [line_x(x0, y0, x1, y1, h)]];
+}
+
+
