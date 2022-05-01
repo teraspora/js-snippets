@@ -46,7 +46,7 @@ async function load_json(jsonfile, title, fields, target) {
 }
 
 function createMask() {
-    return parseInt([...arguments].map(p => (+p).toString()).join(``), 2);
+    return [...arguments].every(x => [0, 1].includes(x)) ? parseInt([...arguments].map(p => (+p).toString()).join(``), 2) : -1;
 }
 
 function getBooleansFromMask(n) {
@@ -64,7 +64,7 @@ function line_y(x0, y0, x1, y1, x) {
 
 function line_x(x0, y0, x1, y1, y) {
     if (x1 == x0) {
-	return Infinity;
+      return Infinity;
     }
     let m = (y1 - y0) / (x1 - x0);
     return (y - y0 + m * x0) / m;
